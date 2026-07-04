@@ -22,21 +22,15 @@ A file, called `xy_data.csv`, contained a list of points (x, y) known to be on t
 It was useful to first try to picture what the equations geometrically represent before trying to do any numerical fitting. The system can be written in a matrix form and the structure became much clear and simpler:
 
 
+
 $$
-\begin{bmatrix}
-x - X \\
-y - 42
-\end{bmatrix}
-=
-\begin{bmatrix}
-\cos(\theta) & -\sin(\theta) \\
-\sin(\theta) & \cos(\theta)
-\end{bmatrix}
-\begin{bmatrix}
-t \\
-e^{M|t|} \cdot \sin(0.3t)
-\end{bmatrix}
+\begin{aligned}
+x - X &= t \cdot \cos(\theta) - e^{M|t|} \cdot \sin(0.3t) \cdot \sin(\theta) \\
+y - 42 &= t \cdot \sin(\theta) + e^{M|t|} \cdot \sin(0.3t) \cdot \cos(\theta)
+\end{aligned}
 $$
+
+
 
 
 
