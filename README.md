@@ -21,21 +21,24 @@ A file, called `xy_data.csv`, contained a list of points (x, y) known to be on t
 
 It was useful to first try to picture what the equations geometrically represent before trying to do any numerical fitting. The system can be written in a matrix form and the structure became much clear and simpler:
 
+
 $$
-\begin{bmatrix} 
-x - X \\ 
-y - 42 
-\end{bmatrix} 
-= 
-\begin{bmatrix} 
-\cos(\theta) & -\sin(\theta) \\ 
-\sin(\theta) & \cos(\theta) 
-\end{bmatrix} 
-\begin{bmatrix} 
-t \\ 
-e^{M|t|} \cdot \sin(0.3t) 
+\begin{bmatrix}
+x - X \\
+y - 42
+\end{bmatrix}
+=
+\begin{bmatrix}
+\cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta)
+\end{bmatrix}
+\begin{bmatrix}
+t \\
+e^{M|t|} \cdot \sin(0.3t)
 \end{bmatrix}
 $$
+
+
 
 This is just a 2-D rotation matrix applied to a more basic curve `(t, e^(M|t|)·sin(0.3t))`, plus a translation of `(X, 42)`. That is, once the rotation and the translation are removed, what remains is a simple exponentially-modulated sine wave, plotted against t on one axis, and t itself on the other. It's crucial to realize this early, since it wasn't just a problem of fitting an arbitrary 2D curve, but more along the lines of finding the rotation angle and offset for the data to re-normalize it back into this known, simple functional form.
 
