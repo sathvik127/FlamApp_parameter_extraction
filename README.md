@@ -23,12 +23,12 @@ It was useful to first try to picture what the equations geometrically represent
 
 
 
+
 $$
-\begin{aligned}
-x - X &= t \cdot \cos(\theta) - e^{M|t|} \cdot \sin(0.3t) \cdot \sin(\theta) \\
-y - 42 &= t \cdot \sin(\theta) + e^{M|t|} \cdot \sin(0.3t) \cdot \cos(\theta)
-\end{aligned}
+[ [x - X], [y - 42] ] = [ [\cos(\theta), -\sin(\theta)], [\sin(\theta), \cos(\theta)] ] \times [ [t], [e^{M|t|} \cdot \sin(0.3t)] ]
 $$
+
+
 
 
 
